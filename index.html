@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | IFE Soft Robot Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>IFE Soft Robot Lab</span>
+        </div>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="pi.html">Principal Investigator</a></li>
+          <li><a href="members.html">Member</a></li>
+          <li><a href="publications.html">Publication</a></li>
+          <li><a href="join.html">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- Carousel -->
+      <div class="carousel" aria-label="Lab highlights carousel">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <img src="轮1.jpg" alt="图片1" />
+          </div>
+          <div class="slide">
+            <img src="轮2.jpg" alt="图片2" />
+          </div>
+        </div>
+        <div
+          class="dots"
+          id="dots"
+          role="tablist"
+          aria-label="carousel navigation"
+        ></div>
+      </div>
+
+      <div class="twocol onecol" style="margin-top: 22px">
+        <div class="card">
+          <h1 class="section-title">Welcome to IFE Soft Robot Lab</h1>
+          <p class="lead">
+            We are an interdisciplinary team that seeks to develop
+            multifunctional flexible/soft electronics to address important
+            scientific and technical challenges in soft robots. Our current
+            research focuses on advanced soft electronic devices for efficient
+            sensing, communicating, and computing that adapt to highly elastic
+            bodies of soft robots, pushing the boundary of their
+            multifunctionality for dynamic, uncertain tasks.
+          </p>
+          <div class="two" style="margin-top: 14px">
+            <div class="card">
+              <h3>Affiliations</h3>
+              <p class="subtle">
+                We are affiliated with the
+                <strong
+                  ><a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://ife.nwpu.edu.cn/index.htm"
+                    >Institute of Flexible Electronics (IFE)</a
+                  ></strong
+                >, Northwestern Polytechnical University (NPU),
+                China.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Recent News</h3>
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <div>
+                  <strong>Nature Communications:</strong> Our paper on
+                  ultra-robust soft robot sensors was published in
+                  <strong
+                    ><a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://www.nature.com/articles/s41467-024-45786-y"
+                      >Nature Communications</a
+                    ></strong
+                  >! 🎉
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        © <span id="year"></span> IFE Soft Robot Lab • Institute of Flexible
+        Electronics (IFE), NPU — All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // --- Carousel ---
+      const slides = document.getElementById("slides");
+      const dots = document.getElementById("dots");
+      const total = slides.children.length;
+      let i = 0;
+      let timer;
+      function mountDots() {
+        for (let k = 0; k < total; k++) {
+          const d = document.createElement("button");
+          d.className = "dot";
+          d.setAttribute("aria-label", "Go to slide " + (k + 1));
+          d.addEventListener("click", () => {
+            go(k, true);
+          });
+          dots.appendChild(d);
+        }
+      }
+      function go(n, user = false) {
+        i = (n + total) % total;
+        slides.style.transform = `translateX(${-i * 100}%)`;
+        Array.from(dots.children).forEach((d, idx) =>
+          d.classList.toggle("active", idx === i)
+        );
+        if (user) {
+          clearInterval(timer);
+          timer = setInterval(() => go(i + 1), 6000);
+        }
+      }
+      function start() {
+        mountDots();
+        go(0);
+        timer = setInterval(() => go(i + 1), 6000);
+        document.getElementById("year").textContent = new Date().getFullYear();
+      }
+      document.addEventListener("DOMContentLoaded", start);
+    </script>
+  </body>
+</html>

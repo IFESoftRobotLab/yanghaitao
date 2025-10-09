@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research | IFE Soft Robot Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>IFE Soft Robot Lab</span>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="research.html">Research</a></li>
+          <li><a href="pi.html">Principal Investigator</a></li>
+          <li><a href="members.html">Member</a></li>
+          <li><a href="publications.html">Publication</a></li>
+          <li><a href="join.html">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h1 class="section-title">Research</h1>
+
+      <article class="research-block">
+        <div class="art"><img src="1.jpg" alt="图片1" /></div>
+        <div>
+          <h3>Soft Robot Sensing</h3>
+          <p>
+            Compliant strain sensors are crucial for soft robots to realize
+            real-time sensing of various environmental stimuli as feedback to
+            enhance robot perception and autonomy. However, the deformable
+            nature of robot bodies and their dynamic actuation behaviors pose an
+            urgent and challenging task in achieving predictive sensor
+            manufacturing and long-term robustness for practical robot
+            applications. Here, we focus on the development of accurate sensor
+            modeling tools and well-controlled sensor dynamics.
+          </p>
+          <div class="refs">
+            Ref:
+            <div>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.nature.com/articles/s41467-024-45786-y"
+                >Nature Communications, 2024, 15, 1636</a
+              >
+            </div>
+
+            <div>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.nature.com/articles/s42256-021-00434-8"
+                >Nature Machine Intelligence, 2022, 4, 84</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="research-block">
+        <div class="art">
+          <img src="2.jpg" alt="图片2" />
+        </div>
+        <div>
+          <h3>Soft Robot Communicating</h3>
+          <p>
+            Tight integration of advanced wireless communication techniques
+            enables more effective cooperation among soft robots, posing an
+            urgent need for high‑performance flexible antennas. However,
+            state‑of‑the‑art flexible antennas usually show limited
+            stretchability, which hinders their application on highly elastic
+            soft robot bodies. Here, we aim to develop mechanically resilient
+            nanomaterials‑based antennas for soft robots.
+          </p>
+          <div class="refs">
+            Ref:
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.science.org/doi/10.1126/scirobotics.aax7020"
+              >Science Robotics, 2019, 4, eaax7020</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article class="research-block">
+        <div class="art">
+          <img src="3.jpg" alt="图片3" />
+        </div>
+        <div>
+          <h3>Soft Robot Computing</h3>
+          <p>
+            Machine intelligence is significant for soft robots to respond
+            smartly to the external world. To achieve embodied intelligence,
+            fusing machine learning algorithms and edge computing techniques
+            shows high potential. However, it remains challenging to process
+            high‑throughput and noisy data on edge chips with compact models in
+            a power‑efficient fashion.
+          </p>
+          <div class="refs">
+            Ref:
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.nature.com/articles/s41467-022-33021-5"
+              >Nature Communications, 2022, 13, 5311</a
+            >
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        © <span id="year"></span> IFE Soft Robot Lab • Institute of Flexible
+        Electronics (IFE), NPU — All rights reserved.
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
