@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ifesoftrobotlab.github.io/yanghaitao/sitemap.xml
