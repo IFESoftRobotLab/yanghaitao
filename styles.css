@@ -1,4 +1,4 @@
-/* IFE Soft Robot Lab — Light Theme Styles */
+/* IFE Machine Intelligence Lab — Light Theme Styles */
 :root {
   --bg: #ffffff;
   --ink: #0f172a; /* slate-900 */
@@ -227,11 +227,12 @@ body {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  background: #fff;
 }
 .research-block .art img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .refs {
   margin-top: 10px;
@@ -286,6 +287,15 @@ body {
   object-fit: cover;
   display: block;
 }
+.person .photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3f8;
+  color: #0b5cab;
+  font-size: 28px;
+  font-weight: 800;
+}
 .person .meta {
   padding: 12px 14px;
 }
@@ -307,6 +317,9 @@ body {
   margin: 0;
   display: grid;
   gap: 12px;
+}
+.pub-list + .pub-list {
+  margin-top: 12px;
 }
 .pub-list li {
   background: #fff;
