@@ -228,11 +228,16 @@ body {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .research-block .art img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center;
+  display: block;
 }
 .refs {
   margin-top: 10px;
