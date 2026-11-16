@@ -1,4 +1,4 @@
-/* IFE Machine Intelligence Lab — Light Theme Styles */
+/* SoFE Machine Intelligence Lab — Light Theme Styles */
 :root {
   --bg: #ffffff;
   --ink: #0f172a; /* slate-900 */
@@ -672,4 +672,39 @@ canvas {
   .slide {
     height: 180px;
   }
+}
+
+/* Member affiliations and press coverage */
+.person-detail {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.news-media-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 36px;
+  min-height: 280px;
+  color: #0b4f9a;
+  background: linear-gradient(145deg, #e8f1fb, #f6f9fd);
+}
+.news-media-label > span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.news-media-label > strong {
+  font-size: 36px;
+  line-height: 1.15;
+}
+.nav-inner {
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.nav ul {
+  min-width: 0;
+  max-width: 100%;
 }
